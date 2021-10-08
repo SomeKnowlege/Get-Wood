@@ -144,14 +144,14 @@ function loadGame() {
 }
 var priceIncreaseFactor = 1.15
   , buildings_code = [];
-buildings_code = ["Axe", "Worker", "COOLMANGO", "tractor", "robot", "farm", "silo", "factory", "self-driving-tractor", "teleportation-portal", "organic-matter-generator"];
+buildings_code = ["axe", "worker", "chain-saw", "tractor", "robot", "farm", "silo", "factory", "self-driving-tractor", "teleportation-portal", "organic-matter-generator"];
 var generatedwoodsAllTime = 0
   , woods = 0
   , woodsPerSecond = 0
   , buildings = [];
 buildings[0] = new Building(buildings_code[0],"Axe",!1,!1,!0,15,.1,0),
 buildings[1] = new Building(buildings_code[1],"Worker",!1,!0,!0,100,.5,0),
-buildings[2] = new Building(buildings_code[2],"COOLMANGO",!0,!0,!0,500,4,0),
+buildings[2] = new Building(buildings_code[2],"ChainSaw",!0,!0,!0,500,4,0),
 buildings[3] = new Building(buildings_code[3],"Tractor",!0,!0,!0,3e3,10,0),
 buildings[4] = new Building(buildings_code[4],"Robot",!0,!0,!0,1e4,40,0),
 buildings[5] = new Building(buildings_code[5],"Farm",!0,!0,!0,4e4,100,0),
