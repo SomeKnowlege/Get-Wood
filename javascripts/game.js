@@ -184,7 +184,7 @@ for (var i in suffixes)
         formatShort.push(" " + prefixes[ii] + suffixes[i]);
 formatShort[10] = "Dc";
 var numberFormatters = [formatEveryThirdPower(formatShort), formatEveryThirdPower(formatLong), rawFormatter];
-var clickstranth = 1e77
+var clickstranth = 1
 $(document).ready(function() {
     loadGame(),
     $("#wood-button").click(function() {
