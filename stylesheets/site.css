@@ -2,9 +2,9 @@ html,body{
 	height:100%
 }
 body{
-	background:rgb(20, 40, 155) url("/images/background.png") no-repeat center bottom;
+	background:rgb(66, 102, 175) url("/images/background.png") no-repeat center bottom;
 	background-size:contain;
-	color:#;
+	color:#4266AF;
 	font-family:-apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif
 }
 a{
