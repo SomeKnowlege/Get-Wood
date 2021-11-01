@@ -27,7 +27,7 @@ function renderBuildings() {
     updateBuildings()
 }
 function updatePageTitle() {
-    document.title = Beautify(woods) + " wood \u2022 get wood"
+    document.title = Beautify(woods) + " wood \u233E get wood"
 }
 function updateBuildings() {
     previous_building_disabled = !1,
@@ -144,7 +144,7 @@ function loadGame() {
 }
 var priceIncreaseFactor = 1.15
   , buildings_code = [];
-buildings_code = ["axe", "worker", "chain-saw", "tractor", "robot", "farm", "silo", "factory", "self-driving-tractor", "teleportation-portal", "organic-matter-generator"];
+buildings_code = ["axe", "worker", "chain-saw", "head-saw", "saw-mill", "stump-grinder", "farm-house", "tree-farm", "barge", "tractor-saw", "forest", "dendrologist", "log-spliter", "board-cutter", "cut-sander", "", "", "", "", "", "", ""];
 var generatedwoodsAllTime = 0
   , woods = 0
   , woodsPerSecond = 0
@@ -152,14 +152,24 @@ var generatedwoodsAllTime = 0
 buildings[0] = new Building(buildings_code[0],"Axe",!1,!1,!0,15,.1,0),
 buildings[1] = new Building(buildings_code[1],"Worker",!1,!0,!0,100,.5,0),
 buildings[2] = new Building(buildings_code[2],"ChainSaw",!0,!0,!0,500,4,0),
-buildings[3] = new Building(buildings_code[3],"Tractor",!0,!0,!0,3e3,10,0),
-buildings[4] = new Building(buildings_code[4],"Robot",!0,!0,!0,1e4,40,0),
-buildings[5] = new Building(buildings_code[5],"Farm",!0,!0,!0,4e4,100,0),
-buildings[6] = new Building(buildings_code[6],"Silo",!0,!0,!0,2e5,400,0),
-buildings[7] = new Building(buildings_code[7],"Factory",!0,!0,!0,1666666,6666,0),
-buildings[8] = new Building(buildings_code[8],"Self-Driving Tractor",!0,!0,!0,123456789,98765,0),
-buildings[9] = new Building(buildings_code[9],"Teleportation Portal",!0,!0,!0,3999999999,999999,0),
-buildings[10] = new Building(buildings_code[10],"Organic Matter Generator",!0,!0,!0,75e9,1e7,0);
+buildings[3] = new Building(buildings_code[3],"Head Saw",!0,!0,!0,3e3,10,0),
+buildings[4] = new Building(buildings_code[4],"Saw Mill",!0,!0,!0,1e4,40,0),
+buildings[5] = new Building(buildings_code[5],"Stump Grinder",!0,!0,!0,4e4,100,0),
+buildings[6] = new Building(buildings_code[6],"Farm House",!0,!0,!0,2e5,400,0),
+buildings[7] = new Building(buildings_code[7],"Tree Farm",!0,!0,!0,1e6,6666,0),
+buildings[8] = new Building(buildings_code[8],"Barge",!0,!0,!0,5e6,98765,0),
+buildings[9] = new Building(buildings_code[9],"Tractor Saw",!0,!0,!0,25e6,999999,0),
+buildings[10] = new Building(buildings_code[10],"Forest",!0,!0,!0,1e8,1e7,0),
+buildings[11] = new Building(buildings_code[11],"Dendrologist",!0,!0,!0,5e8,25e7,0),
+buildings[12] = new Building(buildings_code[12],"Log Spliter",!0,!0,!0,2e9,50e7,0),
+buildings[13] = new Building(buildings_code[13],"Board Cutter",!0,!0,!0,8e9,50e7,0),
+buildings[14] = new Building(buildings_code[14],"Cut Sander",!0,!0,!0,1e10,50e7,0),
+buildings[15] = new Building(buildings_code[15],"Log",!0,!0,!0,25e9,50e7,0),
+buildings[16] = new Building(buildings_code[16],"Log Spliter",!0,!0,!0,2e9,50e7,0),
+buildings[17] = new Building(buildings_code[17],"Log Spliter",!0,!0,!0,2e9,50e7,0),
+buildings[18] = new Building(buildings_code[18],"Log Spliter",!0,!0,!0,2e9,50e7,0),
+buildings[19] = new Building(buildings_code[19],"Log Spliter",!0,!0,!0,2e9,50e7,0),
+buildings[20] = new Building(buildings_code[20],"Log Spliter",!0,!0,!0,2e9,50e7,0);
 var formatLong = [" thousand", " million", " billion", " trillion", " quadrillion", " quintillion", " sextillion", " septillion", " octillion", " nonillion"]
   , prefixes = ["", "un", "duo", "tre", "quattuor", "quin", "sex", "septen", "octo", "novem"]
   , suffixes = ["decillion", "vigintillion", "trigintillion", "quadragintillion", "quinquagintillion", "sexagintillion", "septuagintillion", "octogintillion", "nonagintillion"];
@@ -174,11 +184,12 @@ for (var i in suffixes)
         formatShort.push(" " + prefixes[ii] + suffixes[i]);
 formatShort[10] = "Dc";
 var numberFormatters = [formatEveryThirdPower(formatShort), formatEveryThirdPower(formatLong), rawFormatter];
+var clickstranth = 1e77
 $(document).ready(function() {
     loadGame(),
     $("#wood-button").click(function() {
         event.preventDefault(),
-        addwoods(1),
+        addwoods(clickstranth),
         saveGame()
     }),
     $("ul#buildings").on("click", "a", function() {
@@ -197,3 +208,4 @@ $(document).ready(function() {
         saveGame()
     }, 1e4)
 });
+
